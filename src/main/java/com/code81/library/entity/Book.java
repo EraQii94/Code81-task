@@ -26,6 +26,7 @@ public class Book {
     private String coverImageUrl;
     private String edition;
     private String summary;
+    @Enumerated(EnumType.STRING)
     private BookStatus status;
     private int totalCopies;
     private int availableCopies;

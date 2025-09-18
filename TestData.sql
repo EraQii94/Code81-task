@@ -30,14 +30,13 @@ INSERT INTO member (first_name, last_name, email, address, membership_date, phon
 
 
 -- books
-alter table book modify status varchar(50);
 
 INSERT INTO book (isbn, available_copies, cover_image_url, edition, language, publication_year, status, summary, title, total_copies, publisher_id)
 VALUES
-('9780747532743', 5, 'https://example.com/hp1.jpg', '1st', 'English', 1997, 'Available', 'A young wizard begins his journey.', 'Harry Potter and the Philosopher''s Stone', 5, 1),
-('9780553103540', 3, 'https://example.com/got1.jpg', '1st', 'English', 1996, 'Available', 'Noble families fight for control of the Iron Throne.', 'A Game of Thrones', 4, 2),
-('9780261103573', 2, 'https://example.com/lotr1.jpg', '2nd', 'English', 1954, 'Available', 'Hobbits embark on a quest to destroy the One Ring.', 'The Fellowship of the Ring', 3, 3),
-('9780007120840', 4, 'https://example.com/poirot.jpg', '1st', 'English', 1920, 'Available', 'Detective Hercule Poirot solves mysteries.', 'The Mysterious Affair at Styles', 4, 3);
+('9780747532743', 5, 'https://example.com/hp1.jpg', '1st', 'English', 1997, 'AVAILABLE', 'A young wizard begins his journey.', 'Harry Potter and the Philosopher''s Stone', 5, 1),
+('9780553103540', 3, 'https://example.com/got1.jpg', '1st', 'English', 1996, 'AVAILABLE', 'Noble families fight for control of the Iron Throne.', 'A Game of Thrones', 4, 2),
+('9780261103573', 2, 'https://example.com/lotr1.jpg', '2nd', 'English', 1954, 'AVAILABLE', 'Hobbits embark on a quest to destroy the One Ring.', 'The Fellowship of the Ring', 3, 3),
+('9780007120840', 4, 'https://example.com/poirot.jpg', '1st', 'English', 1920, 'AVAILABLE', 'Detective Hercule Poirot solves mysteries.', 'The Mysterious Affair at Styles', 4, 3);
 
 
 
@@ -60,6 +59,8 @@ INSERT INTO borrowing_transaction (borrow_date, due_date, return_date, book_isbn
 ('2024-05-01', '2024-05-15', '2024-05-12', '9780747532743', 1),
 ('2024-05-10', '2024-05-24', '2024-05-17', '9780553103540', 2),
 ('2024-06-01', '2024-06-15', '2024-06-14', '9780261103573', 3);
+
+
 
 
 select * from book
