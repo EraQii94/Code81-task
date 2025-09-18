@@ -11,7 +11,7 @@ public class BookResponseDTO {
     private String language;
     private int publicationYear;
     private String coverImageUrl;
-    private int edition;
+    private String edition;
     private String summary;
     private BookStatus status;
     private int totalCopies;
